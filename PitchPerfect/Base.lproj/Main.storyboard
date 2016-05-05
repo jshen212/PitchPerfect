@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Play Sounds View Controller-->
@@ -16,7 +17,23 @@
                     <view key="view" contentMode="scaleToFill" id="lU2-2l-uke">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.54589207679999996" green="1" blue="0.79494319609999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ajp-ci-ZDG">
+                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="N6r-40-WMj">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="536"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qfn-Hg-86F" firstAttribute="top" secondItem="Ajp-ci-ZDG" secondAttribute="bottom" id="GVy-ss-XBX"/>
+                            <constraint firstItem="Ajp-ci-ZDG" firstAttribute="leading" secondItem="lU2-2l-uke" secondAttribute="leadingMargin" id="SCm-dK-utv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ajp-ci-ZDG" secondAttribute="trailing" id="Tm5-ak-wxo"/>
+                            <constraint firstItem="Ajp-ci-ZDG" firstAttribute="top" secondItem="Wdh-f2-tHz" secondAttribute="bottom" id="xCA-38-DtM"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GiA-ua-XAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
