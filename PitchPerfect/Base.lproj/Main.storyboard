@@ -21,8 +21,53 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ajp-ci-ZDG">
                                 <rect key="frame" x="20" y="64" width="560" height="536"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="N6r-40-WMj">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="536"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="N6r-40-WMj">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="134"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffe-pO-CeH" userLabel="Snail">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="134"/>
+                                                <state key="normal" image="snail"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C97-YG-iGo" userLabel="Rabbit">
+                                                <rect key="frame" x="280" y="0.0" width="280" height="134"/>
+                                                <state key="normal" image="rabbit"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="oxh-C0-kv2">
+                                        <rect key="frame" x="0.0" y="134" width="560" height="134"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeN-Xj-Phl" userLabel="Chipmunk">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="134"/>
+                                                <state key="normal" image="chipmunk"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awN-mN-92x" userLabel="Darth">
+                                                <rect key="frame" x="280" y="0.0" width="280" height="134"/>
+                                                <state key="normal" image="darth"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FlX-Mb-cWn">
+                                        <rect key="frame" x="0.0" y="268" width="560" height="134"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jic-K7-m8Y" userLabel="Parrot">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="134"/>
+                                                <state key="normal" image="parrot"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sk4-sZ-Fm8" userLabel="Reverb">
+                                                <rect key="frame" x="280" y="0.0" width="280" height="134"/>
+                                                <state key="normal" image="reverb"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZj-zG-vAf">
+                                        <rect key="frame" x="0.0" y="402" width="560" height="134"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zib-EU-YQs" userLabel="Stop">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="134"/>
+                                                <state key="normal" image="Image-1"/>
+                                            </button>
+                                        </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -35,6 +80,15 @@
                             <constraint firstItem="Ajp-ci-ZDG" firstAttribute="top" secondItem="Wdh-f2-tHz" secondAttribute="bottom" id="xCA-38-DtM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chipmunk" destination="aeN-Xj-Phl" id="uCU-LP-fpT"/>
+                        <outlet property="darth" destination="awN-mN-92x" id="bl1-G5-X6G"/>
+                        <outlet property="parrot" destination="jic-K7-m8Y" id="BxJ-Mo-tSf"/>
+                        <outlet property="rabbit" destination="C97-YG-iGo" id="Aan-7i-Tk7"/>
+                        <outlet property="reverb" destination="Sk4-sZ-Fm8" id="lVG-pU-rz4"/>
+                        <outlet property="snail" destination="ffe-pO-CeH" id="Mk9-xf-3UP"/>
+                        <outlet property="stop" destination="zib-EU-YQs" id="D36-xW-Hkp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GiA-ua-XAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,5 +182,11 @@
     <resources>
         <image name="Image" width="100" height="100"/>
         <image name="Image-1" width="100" height="100"/>
+        <image name="chipmunk" width="200" height="200"/>
+        <image name="darth" width="200" height="200"/>
+        <image name="parrot" width="128" height="128"/>
+        <image name="rabbit" width="200" height="200"/>
+        <image name="reverb" width="200" height="200"/>
+        <image name="snail" width="200" height="200"/>
     </resources>
 </document>

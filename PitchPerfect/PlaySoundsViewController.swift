@@ -9,6 +9,15 @@
 import UIKit
 
 class PlaySoundsViewController: UIViewController {
+    
+    @IBOutlet weak var snail: UIButton!
+    @IBOutlet weak var chipmunk: UIButton!
+    @IBOutlet weak var rabbit: UIButton!
+    @IBOutlet weak var darth: UIButton!
+    @IBOutlet weak var parrot: UIButton!
+    @IBOutlet weak var reverb: UIButton!
+    @IBOutlet weak var stop: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
