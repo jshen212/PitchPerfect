@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="boB-Vm-Omi">
             <objects>
-                <viewController id="zvM-ta-V0g" sceneMemberID="viewController">
+                <viewController id="zvM-ta-V0g" customClass="PlaySoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wdh-f2-tHz"/>
                         <viewControllerLayoutGuide type="bottom" id="qfn-Hg-86F"/>
