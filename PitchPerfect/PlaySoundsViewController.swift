@@ -19,14 +19,9 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var reverb: UIButton!
     @IBOutlet weak var stop: UIButton!
     
-    @IBAction func stopButtonPressed(sender: AnyObject) {
-        print("Stop audio button pressed")
-    }
-    
     enum ButtonType: Int { case snail = 0, rabbit, chipmunk, darth, parrot, reverb }
     
     @IBAction func playSoundForButton(sender: UIButton) {
-        print("Play sound button pressed")
         switch(ButtonType (rawValue: sender.tag)!){
         case .snail:
             playSound(rate: 0.5)
@@ -44,6 +39,10 @@ class PlaySoundsViewController: UIViewController {
         configureUI(.Playing)
     }
     
+    @IBAction func stopButtonPressed(sender: AnyObject) {
+        stopAudio()
+    }
+    
     var recordedAudio : NSURL!
     var audioFile: AVAudioFile!
     var audioEngine: AVAudioEngine!
@@ -52,7 +51,6 @@ class PlaySoundsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("playSoundsViewController loaded")
         setupAudio()
         // Do any additional setup after loading the view.
     }

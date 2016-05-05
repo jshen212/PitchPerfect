@@ -35,7 +35,6 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate {
         let recordingName = "recordedVoice.wav"
         let pathArray = [dirPath, recordingName]
         let filePath = NSURL.fileURLWithPathComponents(pathArray)
-        print(filePath)
         
         let session = AVAudioSession.sharedInstance()
         try! session.setCategory(AVAudioSessionCategoryPlayAndRecord)
@@ -63,7 +62,6 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate {
     
     
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
-        print("AVAudioRecorder finished saving recording")
         if(flag){
             self.performSegueWithIdentifier("stopRecording", sender: audioRecorder.url)
         } else {
