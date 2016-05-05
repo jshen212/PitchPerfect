@@ -41,7 +41,7 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate {
         try! session.setCategory(AVAudioSessionCategoryPlayAndRecord)
         
         try! audioRecorder = AVAudioRecorder(URL: filePath!, settings: [:])
-        audioRecorder.delete = self
+        audioRecorder.delegate = self
         audioRecorder.meteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
@@ -62,7 +62,9 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate {
     }
     
     
-    
+    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
+        print("AVAudioRecorder finished saving recording")
+    }
 
 }
 
