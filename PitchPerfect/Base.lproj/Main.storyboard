@@ -17,41 +17,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfl-nP-em6">
-                                <rect key="frame" x="276" y="285" width="49" height="30"/>
-                                <color key="backgroundColor" red="0.1844250428851677" green="1" blue="0.69613995498407477" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Record"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfl-nP-em6">
+                                <rect key="frame" x="224" y="243" width="100" height="100"/>
+                                <state key="normal" image="Image"/>
                                 <connections>
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nG3-tL-deb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPf-8x-ZAD">
-                                <rect key="frame" x="248" y="367" width="106" height="30"/>
-                                <state key="normal" title="Stop Recording"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lH5-yy-aYp">
-                                <rect key="frame" x="247" y="331" width="107" height="21"/>
+                                <rect key="frame" x="221" y="358" width="107" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="zan-cM-clH"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPf-8x-ZAD">
+                                <rect key="frame" x="221" y="422" width="106" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ruo-Or-ThE"/>
+                                </constraints>
+                                <state key="normal" title="Stop Recording"/>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pke-FY-6he"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="VPf-8x-ZAD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1" id="Hur-9Q-bMd"/>
-                            <constraint firstItem="lH5-yy-aYp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="41.5" id="I0M-BJ-cmk"/>
-                            <constraint firstItem="mfl-nP-em6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YJa-eO-hXp"/>
-                            <constraint firstItem="lH5-yy-aYp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a9E-vr-EFh"/>
-                            <constraint firstItem="mfl-nP-em6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fC8-7J-Ce0"/>
-                            <constraint firstItem="VPf-8x-ZAD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="82" id="ypN-9i-7Vk"/>
+                            <constraint firstItem="VPf-8x-ZAD" firstAttribute="centerX" secondItem="mfl-nP-em6" secondAttribute="centerX" id="3Bm-sS-GOf"/>
+                            <constraint firstItem="lH5-yy-aYp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="221" id="44z-8H-URS"/>
+                            <constraint firstItem="lH5-yy-aYp" firstAttribute="leading" secondItem="VPf-8x-ZAD" secondAttribute="leading" id="A4H-ql-xDh"/>
+                            <constraint firstItem="mfl-nP-em6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-26" id="LOA-8i-Udn"/>
+                            <constraint firstItem="mfl-nP-em6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-7" id="QWZ-xZ-mlk"/>
+                            <constraint firstItem="lH5-yy-aYp" firstAttribute="top" secondItem="mfl-nP-em6" secondAttribute="bottom" constant="15" id="WAU-3P-axS"/>
+                            <constraint firstItem="VPf-8x-ZAD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="221" id="ZfE-F8-0vY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VPf-8x-ZAD" secondAttribute="bottom" constant="148" id="aDF-fb-5Mx"/>
+                            <constraint firstItem="VPf-8x-ZAD" firstAttribute="top" secondItem="lH5-yy-aYp" secondAttribute="bottom" constant="43" id="ug8-sD-FKd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="recordButton" destination="mfl-nP-em6" id="7vx-9f-ioE"/>
                         <outlet property="recordingLabel" destination="lH5-yy-aYp" id="aGo-Ck-icv"/>
+                        <outlet property="stopRecordingButton" destination="VPf-8x-ZAD" id="yze-Qw-gRW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="100" height="100"/>
+    </resources>
 </document>

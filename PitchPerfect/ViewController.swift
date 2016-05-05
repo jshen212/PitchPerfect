@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var recordButton: UIButton!
+
+    @IBOutlet weak var stopRecordingButton: UIButton!
+    
     @IBOutlet weak var recordingLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +29,16 @@ class ViewController: UIViewController {
         print("hello from record button")
         recordingLabel.text = "Recording in progress"
     }
+    
+    @IBAction func stopRecording(sender: AnyObject) {
+        print("stop recording button pressed")
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        print("view will appear loaded")
+    }
+    
+    
     
 
 }
